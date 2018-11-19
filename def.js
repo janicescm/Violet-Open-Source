@@ -1,7 +1,7 @@
 var randommsgactive = false;
 var sendrandommsg;
 
-module.exports = function vkeamessage (bot, user, userID, channelID, message, evt, asyncAJAX) {    
+module.exports = function defmessage (bot, user, userID, channelID, message, evt, asyncAJAX) {    
     if (message.substring(0, 7) == 'violet.') {
 
         var args = message.substring(7).split(' ');
