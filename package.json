@@ -1,0 +1,12 @@
+{
+    "name": "Violet",
+    "version": "0.1.4",
+    "description": "A kitty",
+    "main": "bot.js",
+    "author": "Janice Coleman",
+    "dependencies": {
+        "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "winston": "2.*",
+        "xmlhttprequest": "^1.8.0"
+    }
+}
