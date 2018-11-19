@@ -2,7 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 
-var defmessage = require('./servers/def.js'); //Import code for default server
+var defmessage = require('./def.js'); //Import code for default server
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
