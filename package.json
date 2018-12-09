@@ -1,7 +1,7 @@
 {
     "name": "Violet",
-    "version": "0.1.4",
-    "description": "A kitty",
+    "version": "1.0.0",
+    "description": "Violet",
     "main": "bot.js",
     "author": "Janice Coleman",
     "dependencies": {
