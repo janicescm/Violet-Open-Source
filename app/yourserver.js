@@ -1,4 +1,4 @@
-module.exports = function standardMessage (bot, user, userID, channelID, message, evt, asyncAJAX) {
+module.exports = function yourserverMessage (bot, user, userID, channelID, message, evt, asyncAJAX) {
     /* this is a very hardcoded prefix */
     if (message.substring(0, 7) == 'violet.') {
         
