@@ -66,8 +66,8 @@ bot.on('guildMemberAdd', function (member) {
         /* check for a server/guild id */
         case "Place your server/guild id here":
             bot.sendMessage({
-                to: '452594473499754519',
-                message: 'Henlo, <@'+member.id+'>! Welcome to this server! I am <@412030011563048960>. I am a smol kitty. Meow!'
+                to: 'channel id',
+                message: 'Henlo, <@'+member.id+'>! Welcome to this server! I am Violet. I am a smol kitty. Meow!'
             });
             break;
         /* default action */
