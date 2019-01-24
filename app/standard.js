@@ -1,4 +1,5 @@
 module.exports = function standardMessage (bot, user, userID, channelID, message, evt, asyncAJAX) {
+    const botID = 'place your bot id here';
     /* this is a very hardcoded prefix */
     if (message.substring(0, 7) == 'violet.') {
         
@@ -86,7 +87,7 @@ I can also make dad jokes.
     if (message.substring(0, 4) == 'I\'m ') {
         var args = message.substring(4).split('*');
         var cmd = args[0];
-        var msg = 'Henlo '+cmd+', I am Violet! Meow!'
+        var msg = 'Henlo '+cmd+', I am <@'+ botID +'>! Meow!'
 
         bot.sendMessage({
             to: channelID,
@@ -106,7 +107,7 @@ I can also make dad jokes.
     }
 
     /* basic regex command. violet will respond to the word "catto", except when she says it herself */
-    if (message.match(/catto/i) && userID != 'place your bot user id here') {
+    if (message.match(/catto/i) && userID != botID) {
         bot.sendMessage({
             to: channelID,
             message: 'Did I hear catto?'
