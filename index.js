@@ -9,6 +9,9 @@ var auth = require('./auth.json');
 var yourserverMessage = require('./app/yourserver.js');
 var standardMessage = require('./app/standard.js');
 
+/* global variables */
+const botID = 'enter your bot user id here';
+
 /* basic async request */
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 function asyncAJAX(url) {
@@ -67,7 +70,7 @@ bot.on('guildMemberAdd', function (member) {
         case "Place your server/guild id here":
             bot.sendMessage({
                 to: 'channel id',
-                message: 'Henlo, <@'+member.id+'>! Welcome to this server! I am Violet. I am a smol kitty. Meow!'
+                message: 'Henlo, <@'+member.id+'>! Welcome to this server! I am <@'+botID+'>. I am a smol kitty. Meow!'
             });
             break;
         /* default action */
@@ -83,11 +86,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     switch (bot.channels[channelID].guild_id) {
         /* check for a server/guild id */ 
         case "":
-            yourserverMessage(bot, user, userID, channelID, message, evt, asyncAJAX);
+            yourserverMessage(bot, user, userID, channelID, message, evt, asyncAJAX, botID);
             break;
         /* default server/guild */
         default:
-            standardMessage(bot, user, userID, channelID, message, evt, asyncAJAX);
+            standardMessage(bot, user, userID, channelID, message, evt, asyncAJAX, botID);
             break;
     }
 });
